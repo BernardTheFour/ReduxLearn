@@ -33,16 +33,16 @@ export function productDelete(product ={}){
 
 
 /**
- * @param {ids, isDiscounted} product
+ * @param {id, isDiscounted} product
  * @returns
  */
 
-export function productChangeDiscount(product={}){
+export function productDiscount(product={}){
     return {
         type: actions.PRODUCT_DISCOUNT,
         payload: {
             id: product.id,
-            hasDiscount: product.hasDiscount? true : false
+            hasDiscount: product.hasDiscount
         }
     }
 }

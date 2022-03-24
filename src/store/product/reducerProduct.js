@@ -24,5 +24,5 @@ const slice = createSlice({
     }
 });
 
-export const { productAdded, productMarkAsDiscount } = slice.actions;
+export const { productAdded, productDiscount } = slice.actions;
 export default slice.reducer;
