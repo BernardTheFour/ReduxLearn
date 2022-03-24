@@ -3,7 +3,5 @@ import { devToolsEnhancer } from "@redux-devtools/extension"
 import reducerProduct from './store/product/reducerProduct'
 import reducerCart from './store/cart/reducerCart'
 
-const store  = createStore(reducerProduct, devToolsEnhancer({trace:true}))
-const cart = createStore(reducerCart, devToolsEnhancer({trace:true}))
-
-export default store
+export const product  = createStore(reducerProduct, devToolsEnhancer({trace:true}))
+export const cart = createStore(reducerCart, devToolsEnhancer({trace:true}))
