@@ -1,27 +1,38 @@
-import {cart, product} from './store'
+import store from './store'
 import {productAdd, productDelete, productDiscount} from '../src/store/product/productAction'
 import {cartAdd, cartRemove} from './store/cart/reducerCart'
+import {userAdd, userRemove} from './store/user/reducerUser'
 
-product.subscribe(()=>{
-    console.log("Product Changed!", product.getState())
+store.subscribe(()=>{
+    console.log("Store Changed!", store.getState())
 })
 
-product.dispatch(productAdd({
+// product store
+store.dispatch(productAdd({
     name: "Product 1",
     price: 1500
 }))
 
-product.dispatch(productAdd({
+store.dispatch(productAdd({
     name: "Product 2",
     price: 1000
 }))
 
-product.dispatch(productDiscount({
+store.dispatch(productAdd({
+    name: "Product 3",
+    price: 2500
+}))
+
+store.dispatch(productDiscount({
     id: 1,
     hasDiscount: true
 }))
 
-cart.dispatch(cartAdd({
-    id: 1,
-    quantity: 3
+store.dispatch(productDelete({
+    id:2
 }))
+
+// cart store
+
+
+// user store

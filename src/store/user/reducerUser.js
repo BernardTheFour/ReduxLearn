@@ -16,7 +16,7 @@ const slice = createSlice({
         },
 
         userRemove: (users, action) => {
-            const index = users.findIndex(user.id === action.payload.id)
+            const index = users.findIndex(user => user.id === action.payload.id)
             if (index > -1){
                 users.splice(index, 1)
             }
