@@ -3,7 +3,7 @@ import {productAdd, productDelete, productDiscount} from '../src/store/product/p
 import {cartAdd, cartRemove} from './store/cart/reducerCart'
 
 product.subscribe(()=>{
-    console.log("Store Changed!", store.getState())
+    console.log("Product Changed!", product.getState())
 })
 
 product.dispatch(productAdd({
